@@ -22,5 +22,5 @@ Follow these steps to run the project on your computer:
 ### 1️. Clone the repository
 Download the project from GitHub and go inside the folder:
 ```bash
-git clone https://github.com/your-username/WA_MVC_StandBlog.git
-cd WA_MVC_StandBlog
+git clone https://github.com/dugerdev/MvcStandBlog.git
+cd MvcStandBlog
