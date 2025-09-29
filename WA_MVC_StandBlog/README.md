@@ -1,4 +1,4 @@
-﻿# WA_MVC_StandBlog
+﻿# MvcStandBlog
 
 A modern and user-friendly blog application. Developed using ASP.NET Core MVC and Entity Framework Core.
 
@@ -126,6 +126,8 @@ MvcStandBlog/
 - Soft delete support (`IsDeleted` field)
 - Automatic date records (`CreatedOn`, `UpdatedOn`, `DeletedOn`)
 - Unique constraints and indexes
+- Comprehensive code documentation
+- Professional project structure
 
 ## 🔧 Development
 
@@ -156,6 +158,22 @@ dotnet ef database update PreviousMigrationName
 | POST | `/Contact/Contact` | Contact form submission |
 | GET | `/PostDetails/PostDetails` | Blog detail page |
 
+## ✨ Recent Improvements
+
+### Code Quality Enhancements
+- **Comprehensive Documentation**: Added detailed comments and XML documentation throughout the codebase
+- **Namespace Organization**: Fixed namespace issues and organized entity models properly
+- **Professional Structure**: Reorganized project files into logical folders (`Models/Entities/`)
+- **Migration Updates**: Updated database migrations with proper naming conventions
+- **Code Readability**: Enhanced code readability with meaningful comments and documentation
+
+### Documentation Updates
+- **Professional README**: Created comprehensive English documentation
+- **Installation Guide**: Step-by-step setup instructions
+- **Project Structure**: Visual representation of the project organization
+- **API Documentation**: Complete endpoint reference
+- **Development Guide**: Instructions for contributors and developers
+
 ## 🎨 Customization
 
 ### Changing Theme
@@ -168,7 +186,7 @@ You can customize the theme by editing the CSS files in the `wwwroot/assets/css/
 
 ## 🐛 Bug Reports
 
-If you find a bug, please report it via the [Issues](https://github.com/dugerdev/WA_MVC_StandBlog/issues) page.
+If you find a bug, please report it via the [Issues](https://github.com/dugerdev/MvcStandBlog/issues) page.
 
 ## 🤝 Contributing
 
