@@ -38,8 +38,8 @@ For advanced features like admin panel, user authentication, role management, an
 
 ### 1. Clone the Project
 ```bash
-git clone https://github.com/dugerdev/WA_MVC_StandBlog.git
-cd WA_MVC_StandBlog
+git clone https://github.com/dugerdev/MvcStandBlog.git
+cd MvcStandBlog
 ```
 
 ### 2. Install Dependencies
@@ -73,7 +73,7 @@ The application will run at `https://localhost:7063` or `http://localhost:5001`.
 ## 📁 Project Structure
 
 ```
-WA_MVC_StandBlog/
+MvcStandBlog/
 ├── Controllers/          # MVC Controllers
 │   ├── HomeController.cs
 │   ├── BlogController.cs
