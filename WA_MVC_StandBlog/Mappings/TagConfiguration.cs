@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using WA_MVC_StandBlog.Models;
+using WA_MVC_StandBlog.Models.Entities;
 
 namespace WA_MVC_StandBlog.Mappings
 {

@@ -1,4 +1,4 @@
-﻿namespace WA_MVC_StandBlog.Models
+﻿namespace WA_MVC_StandBlog.Models.Entities
 {
     public abstract class BaseEntity
     {

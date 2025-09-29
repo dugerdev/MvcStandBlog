@@ -22,7 +22,7 @@ namespace WA_MVC_StandBlog.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("WA_MVC_StandBlog.Models.Blog", b =>
+            modelBuilder.Entity("WA_MVC_StandBlog.Models.Entities.Blog", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -66,7 +66,7 @@ namespace WA_MVC_StandBlog.Migrations
                     b.ToTable("Blogs", "app");
                 });
 
-            modelBuilder.Entity("WA_MVC_StandBlog.Models.BlogTag", b =>
+            modelBuilder.Entity("WA_MVC_StandBlog.Models.Entities.BlogTag", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -103,7 +103,7 @@ namespace WA_MVC_StandBlog.Migrations
                     b.ToTable("BlogTags", "app");
                 });
 
-            modelBuilder.Entity("WA_MVC_StandBlog.Models.Category", b =>
+            modelBuilder.Entity("WA_MVC_StandBlog.Models.Entities.Category", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -138,7 +138,7 @@ namespace WA_MVC_StandBlog.Migrations
                     b.ToTable("Categories", "app");
                 });
 
-            modelBuilder.Entity("WA_MVC_StandBlog.Models.Comment", b =>
+            modelBuilder.Entity("WA_MVC_StandBlog.Models.Entities.Comment", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -185,7 +185,7 @@ namespace WA_MVC_StandBlog.Migrations
                     b.ToTable("Comments", "app");
                 });
 
-            modelBuilder.Entity("WA_MVC_StandBlog.Models.Contact", b =>
+            modelBuilder.Entity("WA_MVC_StandBlog.Models.Entities.Contact", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -232,7 +232,7 @@ namespace WA_MVC_StandBlog.Migrations
                     b.ToTable("Contacts", "app");
                 });
 
-            modelBuilder.Entity("WA_MVC_StandBlog.Models.Tag", b =>
+            modelBuilder.Entity("WA_MVC_StandBlog.Models.Entities.Tag", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -267,9 +267,9 @@ namespace WA_MVC_StandBlog.Migrations
                     b.ToTable("Tags", "app");
                 });
 
-            modelBuilder.Entity("WA_MVC_StandBlog.Models.Blog", b =>
+            modelBuilder.Entity("WA_MVC_StandBlog.Models.Entities.Blog", b =>
                 {
-                    b.HasOne("WA_MVC_StandBlog.Models.Category", "Category")
+                    b.HasOne("WA_MVC_StandBlog.Models.Entities.Category", "Category")
                         .WithMany("Blogs")
                         .HasForeignKey("CategoryId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -278,15 +278,15 @@ namespace WA_MVC_StandBlog.Migrations
                     b.Navigation("Category");
                 });
 
-            modelBuilder.Entity("WA_MVC_StandBlog.Models.BlogTag", b =>
+            modelBuilder.Entity("WA_MVC_StandBlog.Models.Entities.BlogTag", b =>
                 {
-                    b.HasOne("WA_MVC_StandBlog.Models.Blog", "Blog")
+                    b.HasOne("WA_MVC_StandBlog.Models.Entities.Blog", "Blog")
                         .WithMany("Tags")
                         .HasForeignKey("BlogId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("WA_MVC_StandBlog.Models.Tag", "Tag")
+                    b.HasOne("WA_MVC_StandBlog.Models.Entities.Tag", "Tag")
                         .WithMany("Blogs")
                         .HasForeignKey("TagId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -297,9 +297,9 @@ namespace WA_MVC_StandBlog.Migrations
                     b.Navigation("Tag");
                 });
 
-            modelBuilder.Entity("WA_MVC_StandBlog.Models.Comment", b =>
+            modelBuilder.Entity("WA_MVC_StandBlog.Models.Entities.Comment", b =>
                 {
-                    b.HasOne("WA_MVC_StandBlog.Models.Blog", "Blog")
+                    b.HasOne("WA_MVC_StandBlog.Models.Entities.Blog", "Blog")
                         .WithMany("Comments")
                         .HasForeignKey("BlogId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -308,19 +308,19 @@ namespace WA_MVC_StandBlog.Migrations
                     b.Navigation("Blog");
                 });
 
-            modelBuilder.Entity("WA_MVC_StandBlog.Models.Blog", b =>
+            modelBuilder.Entity("WA_MVC_StandBlog.Models.Entities.Blog", b =>
                 {
                     b.Navigation("Comments");
 
                     b.Navigation("Tags");
                 });
 
-            modelBuilder.Entity("WA_MVC_StandBlog.Models.Category", b =>
+            modelBuilder.Entity("WA_MVC_StandBlog.Models.Entities.Category", b =>
                 {
                     b.Navigation("Blogs");
                 });
 
-            modelBuilder.Entity("WA_MVC_StandBlog.Models.Tag", b =>
+            modelBuilder.Entity("WA_MVC_StandBlog.Models.Entities.Tag", b =>
                 {
                     b.Navigation("Blogs");
                 });

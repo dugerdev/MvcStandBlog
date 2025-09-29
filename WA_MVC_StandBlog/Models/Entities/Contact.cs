@@ -1,4 +1,6 @@
-﻿namespace WA_MVC_StandBlog.Models;
+﻿using WA_MVC_StandBlog.Models.Entities;
+
+namespace WA_MVC_StandBlog.Models.Entities;
 
 public class Contact 
     : BaseEntity
